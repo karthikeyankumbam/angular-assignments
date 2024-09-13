@@ -1,0 +1,7 @@
+<div [style.border-color]="borderColor" [style.border-width]="borderWidth" [style.border-style]="borderStyle"
+    style="padding: 10px; margin: 10px;">
+    <p><i>Child Component</i></p>
+    <span>Data from Parent: {{dataFromParent}}</span>&nbsp;
+    <span><input [(ngModel)]="childData" type="text" placeholder="Enter data"></span>&nbsp;
+    <button (click)="sendData()">send data to Parent</button>
+</div>
