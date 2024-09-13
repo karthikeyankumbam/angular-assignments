@@ -1,0 +1,9 @@
+<div class="container">
+  <b>Angular assignments</b><br><br>
+  <div class="assignment-list">
+    <button *ngFor="let asngmt of assignments; let i=index" (click)="openAssignment(i)">
+      Assignment {{asngmt}}
+    </button>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,15 @@
+<p><b>Interpolation/One way Binding implemented with event Binding</b></p>
+<span><input (input)="changeData($event)" type="text" placeholder="Enter data"></span> &nbsp;
+<span><b> Interpolated Data: </b> {{interpolatedData}}</span>
+
+<p><b>Property Binding</b></p>
+<span><input [(ngModel)]="myColor" type="text" placeholder="Enter Color"></span> &nbsp;
+<span [style.color]="myColor"><b> Iam </b> {{myColor}}</span>
+
+<p><b>Two way Binding</b></p>
+<span><input [(ngModel)]="twowayData" type="text" placeholder="Enter data1"></span> &nbsp;
+<span><input [(ngModel)]="twowayData" type="text" placeholder="Enter data2">
+    
+<p><b>Assignment-1 Parent-Child communication</b></p>
+<app-parent></app-parent>
+
