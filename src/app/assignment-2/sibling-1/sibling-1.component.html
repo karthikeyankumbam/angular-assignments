@@ -1,0 +1,7 @@
+<p><b>Sibling-1</b></p>
+<div [style.border-color]="borderColor" [style.border-width]="borderWidth" [style.border-style]="borderStyle"
+    style="padding: 10px; margin: 10px;">
+    <input [(ngModel)]="myData" placeholder="Enter data in sibling 1">
+    <button (click)="sendToS2()">Send data to Sibling 2</button>
+    <p>Data from sibling-2 : {{s2Data}}</p>
+</div>
