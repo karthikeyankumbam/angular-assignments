@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-sibling-2',
@@ -14,7 +15,14 @@ export class Sibling2Component {
   borderColor: string = 'green';
   borderWidth: string = '5px';
   borderStyle: string = 'solid';
-  sendToS1(){
 
+  constructor(private sharedService: SharedServiceService){
+    this.sharedService.data$.subscribe((data:any)=>{
+      this.s1Data=data;
+    })
+  }
+
+  sendToS1(){
+    this.sharedService.setData2(this.myData);
   }
 }
