@@ -1,5 +1,9 @@
-<p><b>Assignment-2 <br>Sibling communication and Lifecycle hooks</b></p>
+<p><b>Assignment-2</b></p>
 <div class="grid-container">
     <app-sibling-1></app-sibling-1>
     <app-sibling-2></app-sibling-2>
+</div>
+<div>
+    <app-lifecycle-hooks [inputValue]="parentValue"></app-lifecycle-hooks>
+    <p>Parent <input [(ngModel)]="parentValue" placeholder="enter the value in parent"></p>
 </div>
