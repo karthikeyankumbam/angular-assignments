@@ -40,10 +40,10 @@
     </div>
     <!-- Json Pipe  -->
     <div>
-        <h6>Custom pipe</h6>
-        <span><input [(ngModel)]="customText" type="text" placeholder="Enter text"></span>
-        <span><input [(ngModel)]="prefixText" type="text" placeholder="start text"></span>
-        <span><input [(ngModel)]="suffixText" type="text" placeholder="end text"></span>
+        <h4>Custom pipe</h4>
+        <span><input [(ngModel)]="customText" type="text" placeholder="Enter text to reverse"></span>
+        <span><input [(ngModel)]="prefixText" type="text" placeholder="append at start"></span>
+        <span><input [(ngModel)]="suffixText" type="text" placeholder="append at end"></span>
         <span>After using <b>Custom pipe</b> : {{customText | custom:prefixText:suffixText}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
 
     </div>
