@@ -1,1 +1,50 @@
 <p>assignment-3 works!</p>
+<div>
+    <h3 [style.color]="'blue'">Pipes</h3>
+    <!-- Currency pipe -->
+    <p>
+        <span><input [(ngModel)]="amount" type="number" placeholder="Enter amount"></span>
+        <span>After using <b>currency pipe</b> : {{amount | currency:selectedCurrency}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+            <select (change)="selectCurrency($event)">
+                <option value="" disabled selected>Select Currency</option>
+                <option *ngFor="let option of currencyList" [value]="option">{{ option }}</option>
+            </select>
+        </span>
+    </p>
+    <!-- UpperCase and LowerCase Pipes  -->
+    <div>
+        <span><input [(ngModel)]="name" type="text" placeholder="Enter text"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+            <select (change)="onSelectCase($event)">
+                <option value="" disabled selected>Select Case</option>
+                <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+            </select>
+        </span>
+        <span>
+            <div [ngSwitch]="selectedValue">
+                <div *ngSwitchCase="'UpperCasePipe'">
+                    <p>After using <b>{{selectedValue}}</b> :{{ name | uppercase }}</p>
+                </div>
+                <div *ngSwitchCase="'LowerCasePipe'">
+                    <p>After using <b>{{selectedValue}}</b> :{{ name | lowercase }}</p>
+                </div>
+                <div *ngSwitchCase="'TitleCasePipe'">
+                    <p>After using <b>{{selectedValue}}</b> :{{ name | titlecase }}</p>
+                </div>
+                <div *ngSwitchDefault>
+                    <p>Please select an option.</p>
+                </div>
+            </div>
+        </span>
+    </div>
+    <!-- Json Pipe  -->
+    <div>
+        <h6>Custom pipe</h6>
+        <span><input [(ngModel)]="customText" type="text" placeholder="Enter text"></span>
+        <span><input [(ngModel)]="prefixText" type="text" placeholder="start text"></span>
+        <span><input [(ngModel)]="suffixText" type="text" placeholder="end text"></span>
+        <span>After using <b>Custom pipe</b> : {{customText | custom:prefixText:suffixText}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<p>lifecycle-hooks works!</p>
+<div>
+  <h2>Angular Lifecycle Hooks</h2>
+
+  <div>
+    <label for="inputValue">Input Value:</label>
+    <input id="inputValue" [(ngModel)]="inputValue" placeholder="Enter the value in child">
+  </div>
+
+  <h3>Lifecycle Messages:</h3>
+
+  <ul>
+    <li *ngFor="let message of lifecycleMessages">{{ message }}</li>
+  </ul>
+  <p #viewChild>Child View
+  </p>
+</div>
