@@ -1,0 +1,4 @@
+.responsive-image {
+    width: 100px; /* or a specific size, e.g., 300px */
+    height: 100px; /* Maintain aspect ratio */
+  }

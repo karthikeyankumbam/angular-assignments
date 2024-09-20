@@ -11,14 +11,14 @@ import { CustomPipe } from './custom.pipe';
   styleUrl: './assignment-3.component.css'
 })
 export class Assignment3Component {
-  amount!:number;
+  amount:number=0;
   currencyValue!:string;
 
-  name!:string;
-  selectedValue: string = '';
+  name:string="sample text";
+  selectedValue: string = 'UpperCasePipe';
   options: string[] = ['UpperCasePipe','LowerCasePipe',"TitleCasePipe"];
 
-  selectedCurrency: string = '';
+  selectedCurrency: string = 'INR';
   currencyList: string[] = ['INR','EUR',"AUD"];
 
   customText!:string;
