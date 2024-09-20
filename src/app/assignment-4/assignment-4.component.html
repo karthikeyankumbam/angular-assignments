@@ -1,0 +1,17 @@
+<p>assignment-4 works!</p>
+<div>
+    <button (click)="getProducts()"> get products</button>
+    <button (click)="resetProducts()"> Reset</button>
+    <ol>
+        @for(product of productList; track product.id){
+        <li>
+            <span><h5>Title {{product.title}}</h5></span>
+            <span>
+                <img [src]="product.image" class="responsive-image">
+            </span>
+        </li>
+        }
+    </ol>
+    <button (click)="sendPostRequest()">Post request</button>
+    {{product | json}}
+</div>
