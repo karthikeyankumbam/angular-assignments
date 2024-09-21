@@ -1,0 +1,13 @@
+<p>assignment-5 works!</p>
+<h3 [style.color]="'brown'">Routes</h3>
+<div>
+    <ul>
+        <li> <a routerLink="first" routerLinkActive="active"> First</a> </li>
+        <li> <a routerLink="second" routerLinkActive="active">Second</a> </li>
+        <li> <a [routerLink]="['path-parameter',id]" routerLinkActive="active"> Path Parameter Link {{id}}</a></li>
+        <li> <a [routerLink]="['query-parameter']" [queryParams]="{title:'bahubali', language:'telugu'}" routerLinkActive="active" >
+            Query Parameter Link</a></li>
+    </ul>
+    Router Outlet
+    <router-outlet></router-outlet>
+</div>
