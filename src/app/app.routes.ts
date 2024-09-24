@@ -8,6 +8,7 @@ import { FirstComponent } from './assignment-5/first/first.component';
 import { SecondComponent } from './assignment-5/second/second.component';
 import { PathParamComponent } from './assignment-5/path-param/path-param.component';
 import { QueryParamComponent } from './assignment-5/query-param/query-param.component';
+import { LazyComponent } from './assignment-5/lazy-loading/lazy/lazy.component';
 
 export const routes: Routes = [
     { path: 'assignment-1', component: Assignment1Component },
@@ -19,7 +20,12 @@ export const routes: Routes = [
             {path: 'first', component: FirstComponent},
             {path: 'second', component: SecondComponent},
             {path: 'path-parameter/:id',component: PathParamComponent},
-            {path: 'query-parameter',component: QueryParamComponent}
+            {path: 'query-parameter',component: QueryParamComponent},
+            // {path: 'lazy-load',component: LazyComponent},
+            {
+                path: 'lazy-load',
+                loadComponent: () => import('./assignment-5/lazy-loading/lazy/lazy.component').then(m => m.LazyComponent)
+              }
 
         ]
     }
