@@ -1,0 +1,29 @@
+<p>actor-form works!</p>
+<div class="form-group">
+    <button type="button" class="btn btn-default" (click)="newActor(); actorForm.reset()">New Actor</button>
+    <form (ngSubmit)="onSubmit()" #actorForm="ngForm">
+        {{ model | json }}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+                #name="ngModel">
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                Name is required
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="studio">Studio</label>
+            <input type="text" class="form-control" id="studio" [(ngModel)]="model.studio" name="studio">
+        </div>
+        <div class="form-group">
+            <label for="skill">Skill</label>
+            <select class="form-control" id="skill" required [(ngModel)]="model.skill" name="skill">
+                <option *ngFor="let skill of skills" [value]="skill">{{ skill }}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success"
+        [disabled]="!actorForm.form.valid">Submit</button>
+    </form>
+    
+</div>

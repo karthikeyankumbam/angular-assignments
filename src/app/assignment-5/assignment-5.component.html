@@ -9,6 +9,9 @@
                 routerLinkActive="active">
                 Query Parameter Link</a></li>
         <li> <a routerLink="lazy-load" routerLinkActive="active">Lazy load</a> </li>
+        <li> <a routerLink="guard" routerLinkActive="active">guard</a>&nbsp;&nbsp;&nbsp;
+            <button (click)="makeAuthGuardTrue()">Togle guard</button>&nbsp;&nbsp;&nbsp; {{isAdmin}}
+        </li>
     </ul>
     Router Outlet
     <router-outlet></router-outlet>
