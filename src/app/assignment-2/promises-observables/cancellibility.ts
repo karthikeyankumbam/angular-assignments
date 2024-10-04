@@ -1,6 +1,8 @@
 
-// Importing RxJS library (make sure to include it in your project)
 import { Observable } from 'rxjs';
+
+/* Once a Promise is initiated, it cannot be cancelled.
+An Observable can be cancelled by unsubscribing. */
 
 // Create an observable that emits values over time
 const numberObservable = new Observable(subscriber => {
@@ -38,3 +40,11 @@ setTimeout(() => {
     subscription.unsubscribe();
     console.log("Unsubscribed from observable.");
 }, 5000);
+/**
+ * Error Handling
+    In a Promise, errors can be caught using .catch().
+    In an Observable, errors are sent to the subscriber.
+ * Operators
+    Promises do not provide operators for transforming or combining values.
+    Observables come with a rich set of operators for handling asynchronous data streams.
+ */

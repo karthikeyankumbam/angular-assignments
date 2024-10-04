@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// Importing RxJS library (make sure to include it in your project)
 var rxjs_1 = require("rxjs");
+/* Once a Promise is initiated, it cannot be cancelled.
+An Observable can be cancelled by unsubscribing. */
 // Create an observable that emits values over time
 var numberObservable = new rxjs_1.Observable(function (subscriber) {
     var count = 0;
