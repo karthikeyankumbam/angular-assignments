@@ -10,6 +10,7 @@ import { SecondComponent } from './assignment-5/second/second.component';
 import { PathParamComponent } from './assignment-5/path-param/path-param.component';
 import { QueryParamComponent } from './assignment-5/query-param/query-param.component';
 import { authGuard } from './auth.guard';
+import { Assignment7Component } from './assignment-7/assignment-7.component';
 
 export const routes: Routes = [
     { path: 'assignment-1', component: Assignment1Component },
@@ -30,6 +31,7 @@ export const routes: Routes = [
 
         ]
     },
-    { path: 'assignment-6', component: Assignment6Component}
+    { path: 'assignment-6', component: Assignment6Component},
+    { path: 'assignment-7', component: Assignment7Component},
 
 ];
